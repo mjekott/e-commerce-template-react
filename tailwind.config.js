@@ -21,6 +21,12 @@ module.exports = {
         primary: "green",
       },
     },
+    variants: {
+      extend: {
+        display: ["group-hover"],
+        visibility: ["group-hover"],
+      },
+    },
   },
   plugins: [],
 };
