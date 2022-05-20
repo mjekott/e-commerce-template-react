@@ -17,7 +17,7 @@ function ProductCard() {
         />
         <a
           href="/#"
-          className="absolute right-1 top-1 z-20   flex h-8 w-8 items-center justify-center rounded-full bg-white  p-1 text-primary transition"
+          className="absolute right-1 top-1 z-20 flex h-8 w-8 items-center justify-center rounded-full bg-white  p-1 text-primary transition"
         >
           <AiOutlineHeart className="h-full w-full " />
         </a>
@@ -25,7 +25,7 @@ function ProductCard() {
           <div className="relative h-full w-full">
             <a
               href="/#"
-              className=" absolute inset-x-0 bottom-0 flex items-center justify-center bg-gray-800 py-2 text-white"
+              className="absolute inset-x-0 bottom-0 flex items-center justify-center bg-gray-800 py-2 text-white"
             >
               <AiFillEye className="h-5 w-5" />
               <span className="ml-2">Quick View</span>
