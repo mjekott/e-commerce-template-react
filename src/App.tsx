@@ -1,11 +1,8 @@
 import React from "react";
+import Layout from "./component/layout/component";
 
 function App() {
-  return (
-    <div>
-      <div className="container h-20 bg-gray-300"></div>
-    </div>
-  );
+  return <Layout />;
 }
 
 export default App;
