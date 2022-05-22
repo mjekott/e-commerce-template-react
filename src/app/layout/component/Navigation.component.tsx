@@ -1,5 +1,5 @@
 import React from "react";
-import CategoryButton from "./CateggoryButton.component";
+import CategoryButton from "./CategoryButton.component";
 import { Link } from "react-router-dom";
 
 function Navigation() {
