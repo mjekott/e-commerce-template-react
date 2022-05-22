@@ -32,12 +32,21 @@ function Navigation() {
               Contact us
             </Link>
           </div>
-          <Link
-            to="/login"
-            className="text-gray-200 transition hover:text-white"
-          >
-            Login/Register
-          </Link>
+          <div>
+            <Link
+              to="/login"
+              className="text-gray-200 transition hover:text-white"
+            >
+              Login
+            </Link>
+            <span className="mx-1 text-white">/</span>
+            <Link
+              to="/register"
+              className="text-gray-200 transition hover:text-white"
+            >
+              Register
+            </Link>
+          </div>
         </div>
       </div>
     </nav>

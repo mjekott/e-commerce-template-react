@@ -1,15 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Login() {
+function Register() {
   return (
     <div className="container py-8">
       <div className="mx-auto  max-w-lg rounded border border-gray-300 p-7 shadow">
-        <h2 className="mb-1 text-2xl font-medium uppercase">Login</h2>
+        <h2 className="mb-1 text-2xl font-medium uppercase">
+          Create an account
+        </h2>
         <p className="mb-6  text-sm text-gray-600">
-          Login if your a returning customer
+          Register here if you don't have an account
         </p>
         <form className="space-y-4">
+          <div className="flex flex-col">
+            <label
+              htmlFor="fullName"
+              className="mb-2 block text-sm text-gray-600 after:ml-1 after:text-red-600 after:content-['*']"
+            >
+              Full Name
+            </label>
+            <input
+              type="text"
+              id="fullName"
+              className=" block border border-gray-300 bg-gray-50 px-4
+              py-3 outline-none placeholder:text-gray-400 focus:border-primary"
+              placeholder="John Doe"
+            />
+          </div>
           <div className="flex flex-col">
             <label
               htmlFor="email"
@@ -18,11 +35,11 @@ function Login() {
               Email Adress
             </label>
             <input
-              type="text"
               id="email"
+              type="text"
               className=" block border border-gray-300 bg-gray-50 px-4
               py-3 outline-none placeholder:text-gray-400 focus:border-primary"
-              placeholder="Enter your email address"
+              placeholder="example@mail.com"
             />
           </div>
           <div className="flex flex-col">
@@ -37,32 +54,44 @@ function Login() {
               id="password"
               className=" block border border-gray-300 bg-gray-50 px-4
               py-3 outline-none placeholder:text-gray-400 focus:border-primary"
-              placeholder="Enter your password"
+              placeholder="type password"
             />
           </div>
-          <div className="flex items-center justify-between">
-            <label htmlFor="remember-me">
-              <input
-                type="checkbox"
-                id="remember-me"
-                className="accent-primary"
-              />
-              <span className="ml-2 text-gray-600">Remember me</span>
-            </label>
-            <Link
-              to="/forgot-password"
-              className=" text-primary hover:underline"
+          <div className="flex flex-col">
+            <label
+              htmlFor="password"
+              className="mb-2 block text-sm text-gray-600 after:ml-1 after:text-red-600 after:content-['*']"
             >
-              Forgot Password?
-            </Link>
+              Confirm Password
+            </label>
+            <input
+              type="password"
+              id="password"
+              className=" block border border-gray-300 bg-gray-50 px-4
+              py-3 outline-none placeholder:text-gray-400 focus:border-primary"
+              placeholder="confirm your password"
+            />
           </div>
+
+          <label htmlFor="remember-me" className="flex items-center">
+            <input
+              type="checkbox"
+              id="remember-me"
+              className="accent-primary"
+            />
+            <p className="ml-2 text-sm text-gray-600">
+              I have read and agree to the{" "}
+              <span className="text-primary">terms & conditon</span>
+            </p>
+          </label>
+
           <button className="block w-full border border-primary bg-primary py-3 px-4 text-white hover:bg-transparent hover:text-primary">
-            Login
+            Create an account
           </button>
         </form>
         <div className="relative mt-5 flex justify-center">
           <div className="relative z-10 bg-white px-3 uppercase text-gray-600">
-            Or login with
+            Or Create an account with
           </div>
           <div className="absolute left-0 top-3 w-full border-b border-gray-300"></div>
         </div>
@@ -75,9 +104,9 @@ function Login() {
           </button>
         </div>
         <p className="mt-4 text-center text-gray-600">
-          Don't have an account?{" "}
-          <Link to="/register" className="text-primary hover:underline">
-            Register now
+          Already have an account?{" "}
+          <Link to="/login" className="text-primary hover:underline">
+            Login now
           </Link>
         </p>
       </div>
@@ -85,4 +114,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Register;
