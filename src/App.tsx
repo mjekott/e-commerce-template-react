@@ -4,12 +4,14 @@ import Layout from "./app/layout/component";
 import Home from "./pages/Home.page";
 import Shop from "./pages/Shop.page";
 import ProductView from "./pages/ProductView.page";
+import Login from "./pages/Login.page";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route element={<Layout />}>
+          <Route path="/login" element={<Login />} />
           <Route path="/" element={<Home />} />
           <Route path="/product/:id" element={<ProductView />} />
           <Route path="/shop" element={<Shop />} />
