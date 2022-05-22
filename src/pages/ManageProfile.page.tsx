@@ -7,7 +7,10 @@ function ManageProfile() {
       <div className="py-2 px-4 shadow">
         <div className="mb-4 flex items-center justify-between">
           <h2 className="font-medium">Personal Profile</h2>
-          <Link to="/" className="text-primary hover:underline">
+          <Link
+            to="/account/profile-information"
+            className="text-primary hover:underline"
+          >
             Edit
           </Link>
         </div>
@@ -20,7 +23,10 @@ function ManageProfile() {
       <div className="py-2 px-4 shadow">
         <div className="mb-4 flex items-center justify-between">
           <h2 className="font-medium">Shipping Address</h2>
-          <Link to="/" className="text-primary hover:underline">
+          <Link
+            to="/account/manage-address"
+            className="text-primary hover:underline"
+          >
             Edit
           </Link>
         </div>
@@ -33,7 +39,10 @@ function ManageProfile() {
       <div className="py-2 px-4 shadow">
         <div className="mb-4 flex items-center justify-between">
           <h2 className="font-medium">Billing Address</h2>
-          <Link to="/" className="text-primary hover:underline">
+          <Link
+            to="/account/manage-address"
+            className="text-primary hover:underline"
+          >
             Edit
           </Link>
         </div>

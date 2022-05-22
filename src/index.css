@@ -18,7 +18,8 @@ h6 {
 
 @layer utilities {
   input[type="number"]::-webkit-inner-spin-button,
-  input[type="number"]::-webkit-outer-spin-button {
+  input[type="number"]::-webkit-outer-spin-button,
+  select {
     -webkit-appearance: none;
     margin: 0;
   }
