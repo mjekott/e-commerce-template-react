@@ -6,6 +6,8 @@ import Shop from "./pages/Shop.page";
 import ProductView from "./pages/ProductView.page";
 import Login from "./pages/Login.page";
 import Register from "./pages/Register.page";
+import Account from "./pages/Account";
+import ManageProfile from "./pages/ManageProfile.page";
 
 function App() {
   return (
@@ -17,6 +19,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/product/:id" element={<ProductView />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/account" element={<Account />}>
+            <Route path="/account/manage" element={<ManageProfile />} />
+          </Route>
         </Route>
       </Routes>
     </Router>

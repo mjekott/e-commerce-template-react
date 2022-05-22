@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Navigation() {
   return (
-    <nav className="bg-gray-800">
+    <nav className="hidden bg-gray-800 lg:block">
       <div className="container flex">
         <CategoryButton />
         {/* nanigation links */}

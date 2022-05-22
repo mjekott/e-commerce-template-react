@@ -3,7 +3,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 
 function CategoryButton() {
   return (
-    <div className="group relative flex cursor-pointer items-center  bg-primary px-8 py-4">
+    <div className="group relative z-30 flex cursor-pointer  items-center bg-primary px-8 py-4">
       <AiOutlineMenu className="text-white" />
       <span className="ml-2 text-white">All categories</span>
       <div className="invisible absolute left-0 top-full w-full divide-y divide-dashed divide-gray-300 bg-white py-3 opacity-0 shadow-md transition duration-300 group-hover:visible group-hover:opacity-100">

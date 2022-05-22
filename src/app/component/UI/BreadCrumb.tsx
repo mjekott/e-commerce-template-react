@@ -17,8 +17,8 @@ function BreadCrumb({ data }: Props) {
         <li key={index} className="flex items-center justify-center">
           <Link to={item.href}>
             <p
-              className={`text-sm font-medium capitalize ${
-                lastIndex === index ? "text-gray-700" : "text-primary"
+              className={`text-sm font-normal capitalize ${
+                lastIndex === index ? "text-gray-800" : "text-primary"
               }`}
             >
               {item.text}

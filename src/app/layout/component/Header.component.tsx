@@ -15,7 +15,7 @@ function Header() {
           <img src="/images/logo.png" alt="e-shop" className="w-10" />
         </a>
         {/* seacrh bar */}
-        <div className="relative flex w-full max-w-xl">
+        <div className="relative hidden w-full max-w-xl lg:flex">
           <span className="absolute left-0 top-0 flex h-full w-10 items-center justify-center">
             <AiOutlineSearch className="text-lg text-gray-400" />
           </span>
@@ -42,7 +42,7 @@ function Header() {
           </a>
           <a
             href="/#"
-            className="relative flex flex-col items-center justify-center text-gray-700 transition hover:text-primary"
+            className="relative hidden flex-col items-center justify-center text-gray-700 transition hover:text-primary lg:flex"
           >
             <AiOutlineShoppingCart className="w-10 text-2xl" />
             <div className="leadering-3 text-xs">Cart</div>
