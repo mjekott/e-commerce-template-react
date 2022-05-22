@@ -1,5 +1,9 @@
 import React from "react";
-import { AiFillAppstore, AiOutlineUnorderedList } from "react-icons/ai";
+import {
+  AiFillAppstore,
+  AiOutlineHome,
+  AiOutlineUnorderedList,
+} from "react-icons/ai";
 import BreadCrumb from "../app/component/UI/BreadCrumb";
 import Pagination from "../app/component/UI/Pagination";
 import ProductCard from "../features/products/component/ProductCard";
@@ -8,7 +12,13 @@ import ShopFilters from "../features/shop/component/ShopFilters";
 function Shop() {
   return (
     <section>
-      <BreadCrumb page="shop" />
+      <BreadCrumb
+        data={[
+          { text: <AiOutlineHome />, href: "/" },
+          { text: "Shop", href: "/shop" },
+        ]}
+      />
+
       <div className="container grid grid-cols-4 items-start gap-6 pt-4 pb-16">
         <div className="hidden lg:col-span-1 lg:block">
           <ShopFilters />

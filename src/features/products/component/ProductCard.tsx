@@ -5,6 +5,7 @@ import {
   AiFillEye,
 } from "react-icons/ai";
 import { Rating } from "react-simple-star-rating";
+import { Link } from "react-router-dom";
 
 function ProductCard() {
   return (
@@ -34,11 +35,11 @@ function ProductCard() {
         </div>
       </div>
       <div className="flex flex-col px-4 pt-4 pb-3">
-        <a href="/#">
+        <Link to="/product/1">
           <h4 className="mb-2 text-xl font-medium uppercase text-gray-800 transition ">
             Guyer chair
           </h4>
-        </a>
+        </Link>
         <div className="mb-1 flex items-baseline space-x-2 font-roboto">
           <p className="text-xl font-semibold text-primary">$45</p>
         </div>

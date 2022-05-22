@@ -8,23 +8,23 @@ import {
 
 function Header() {
   return (
-    <header className="py-4 shadow-sm bg-white">
-      <div className=" container flex justify-between items-center">
+    <header className="bg-white py-4 shadow-sm">
+      <div className=" container flex items-center justify-between">
         {/* logo */}
         <a href="##">
-          <img src="images/logo.png" alt="e-shop" className="w-10" />
+          <img src="/images/logo.png" alt="e-shop" className="w-10" />
         </a>
         {/* seacrh bar */}
-        <div className="w-full flex max-w-xl relative">
-          <span className="absolute left-0 top-0 h-full w-10 flex justify-center items-center">
+        <div className="relative flex w-full max-w-xl">
+          <span className="absolute left-0 top-0 flex h-full w-10 items-center justify-center">
             <AiOutlineSearch className="text-lg text-gray-400" />
           </span>
           <input
             type="text"
-            className="w-full border border-primary border-r-0 pl-12 py-3 pr-3 rounded-l-md focus:outline-none"
+            className="w-full rounded-l-md border border-r-0 border-primary py-3 pl-12 pr-3 focus:outline-none"
             placeholder="Search"
           />
-          <button className=" bg-primary border border-primary text-white px-8 rounded-r-md hover:bg-transparent hover:text-primary transition">
+          <button className=" rounded-r-md border border-primary bg-primary px-8 text-white transition hover:bg-transparent hover:text-primary">
             Search
           </button>
         </div>
@@ -32,30 +32,30 @@ function Header() {
         <div className="flex items-center space-x-4">
           <a
             href="/#"
-            className="flex justify-center items-center flex-col text-gray-700 hover:text-primary transition relative"
+            className="relative flex flex-col items-center justify-center text-gray-700 transition hover:text-primary"
           >
-            <AiOutlineHeart className="text-2xl w-10" />
-            <div className="text-xs leadering-3">Wish List</div>
-            <span className="absolute right-1 -top-1 w-4 h-4 rounded-full flex items-center justify-center bg-primary text-white text-xs">
+            <AiOutlineHeart className="w-10 text-2xl" />
+            <div className="leadering-3 text-xs">Wish List</div>
+            <span className="absolute right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-xs text-white">
               8
             </span>
           </a>
           <a
             href="/#"
-            className="flex justify-center items-center flex-col text-gray-700 hover:text-primary transition relative"
+            className="relative flex flex-col items-center justify-center text-gray-700 transition hover:text-primary"
           >
-            <AiOutlineShoppingCart className="text-2xl w-10" />
-            <div className="text-xs leadering-3">Cart</div>
-            <span className="absolute right-1 -top-1 w-4 h-4 rounded-full flex items-center justify-center bg-primary text-white text-xs">
+            <AiOutlineShoppingCart className="w-10 text-2xl" />
+            <div className="leadering-3 text-xs">Cart</div>
+            <span className="absolute right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-xs text-white">
               8
             </span>
           </a>
           <a
             href="/#"
-            className="flex justify-center items-center flex-col text-gray-700 hover:text-primary transition relative"
+            className="relative flex flex-col items-center justify-center text-gray-700 transition hover:text-primary"
           >
-            <AiOutlineUser className="text-2xl w-10" />
-            <div className="text-xs leadering-3">Account</div>
+            <AiOutlineUser className="w-10 text-2xl" />
+            <div className="leadering-3 text-xs">Account</div>
           </a>
         </div>
       </div>

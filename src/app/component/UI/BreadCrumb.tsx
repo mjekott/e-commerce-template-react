@@ -1,19 +1,35 @@
-import React from "react";
+import React, { ReactElement } from "react";
+import { AiOutlineRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import { AiOutlineHome, AiOutlineRight } from "react-icons/ai";
+
 type Props = {
-  page: string;
+  data: {
+    text: string | ReactElement;
+    href: string;
+  }[];
 };
 
-function BreadCrumb({ page }: Props) {
+function BreadCrumb({ data }: Props) {
+  const lastIndex = data.length - 1;
   return (
-    <div className="container flex items-center space-x-2 py-4">
-      <Link to="/" className="text-base text-primary">
-        <AiOutlineHome />
-      </Link>
-      <AiOutlineRight className="text-gray-700" />
-      <p className="font-medium capitalize text-gray-700">{page}</p>
-    </div>
+    <ul className="container flex items-center space-x-1 py-4">
+      {data.map((item, index) => (
+        <li key={index} className="flex items-center justify-center">
+          <Link to={item.href}>
+            <p
+              className={`text-sm font-medium capitalize ${
+                lastIndex === index ? "text-gray-700" : "text-primary"
+              }`}
+            >
+              {item.text}
+            </p>
+          </Link>
+          {lastIndex !== index && (
+            <AiOutlineRight className=" h-3 w-5 text-gray-700" />
+          )}
+        </li>
+      ))}
+    </ul>
   );
 }
 

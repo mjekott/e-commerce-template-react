@@ -1,5 +1,6 @@
 import React from "react";
 import CategoryButton from "./CateggoryButton.component";
+import { Link } from "react-router-dom";
 
 function Navigation() {
   return (
@@ -7,24 +8,36 @@ function Navigation() {
       <div className="container flex">
         <CategoryButton />
         {/* nanigation links */}
-        <div className="flex items-center justify-between flex-1 pl-12">
+        <div className="flex flex-1 items-center justify-between pl-12">
           <div className="items-center space-x-6 capitalize">
-            <a href="/#" className="text-gray-200 hover:text-white transition">
+            <Link to="/" className="text-gray-200 transition hover:text-white">
               Home
-            </a>
-            <a href="/#" className="text-gray-200 hover:text-white transition">
+            </Link>
+            <Link
+              to="/shop"
+              className="text-gray-200 transition hover:text-white"
+            >
               Shop
-            </a>
-            <a href="/#" className="text-gray-200 hover:text-white transition">
+            </Link>
+            <Link
+              to="/about-us"
+              className="text-gray-200 transition hover:text-white"
+            >
               About us
-            </a>
-            <a href="/#" className="text-gray-200 hover:text-white transition">
+            </Link>
+            <Link
+              to="/contact-us"
+              className="text-gray-200 transition hover:text-white"
+            >
               Contact us
-            </a>
+            </Link>
           </div>
-          <a href="/#" className="text-gray-200 hover:text-white transition">
+          <Link
+            to="/login"
+            className="text-gray-200 transition hover:text-white"
+          >
             Login/Register
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
