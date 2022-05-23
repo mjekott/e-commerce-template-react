@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   AiOutlineHeart,
   AiOutlineSearch,
@@ -11,9 +12,9 @@ function Header() {
     <header className="bg-white py-4 shadow-sm">
       <div className=" container flex items-center justify-between">
         {/* logo */}
-        <a href="##">
+        <Link to="/">
           <img src="/images/logo.png" alt="e-shop" className="w-10" />
-        </a>
+        </Link>
         {/* seacrh bar */}
         <div className="relative hidden w-full max-w-xl lg:flex">
           <span className="absolute left-0 top-0 flex h-full w-10 items-center justify-center">

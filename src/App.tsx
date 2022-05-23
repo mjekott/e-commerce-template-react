@@ -12,6 +12,7 @@ import ProfileInformation from "./pages/ProfileInformation.page";
 import ManageAddress from "./pages/ManageAddress.page";
 import ChangePassword from "./pages/ChangePassword.page";
 import WishList from "./pages/WishList.page";
+import Checkout from "./pages/Checkout.page";
 
 function App() {
   return (
@@ -23,18 +24,16 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/product/:id" element={<ProductView />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="/account" element={<Account />}>
-            <Route path="/account/manage" element={<ManageProfile />} />
+            <Route path="/account" element={<ManageProfile />} />
             <Route
-              path="/account/profile-information"
+              path="profile-information"
               element={<ProfileInformation />}
             />
-            <Route path="/account/manage-address" element={<ManageAddress />} />
-            <Route
-              path="/account/change-password"
-              element={<ChangePassword />}
-            />
-            <Route path="/account/wishlist" element={<WishList />} />
+            <Route path="manage-address" element={<ManageAddress />} />
+            <Route path="change-password" element={<ChangePassword />} />
+            <Route path="wishlist" element={<WishList />} />
           </Route>
         </Route>
       </Routes>

@@ -7,7 +7,7 @@ import {
   AiOutlineLogout,
 } from "react-icons/ai";
 import { MdPayment } from "react-icons/md";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import BreadCrumb from "../app/component/UI/BreadCrumb";
 
 function Account() {
@@ -19,7 +19,7 @@ function Account() {
           { text: "My Account", href: "account" },
         ]}
       />
-      <div className="container grid grid-cols-4 gap-3 py-4">
+      <div className="py- container grid grid-cols-4 gap-3">
         <div className="col-span-4 lg:col-span-1">
           <div className="flex  items-center gap-4 px-4 py-3 shadow">
             <div className="rounded-full border border-gray-300 p-1">
@@ -36,12 +36,15 @@ function Account() {
           </div>
           <div className="hidden space-y-4 divide-y divide-gray-200 rounded p-4  text-gray-600 shadow lg:block">
             <ul className=" space-y-1 rounded bg-white py-2 text-gray-600">
-              <li className="relative cursor-pointer  px-6 text-sm text-primary hover:text-primary">
+              <Link
+                to="/account"
+                className="relative cursor-pointer  px-6 text-sm text-primary hover:text-primary"
+              >
                 Manage Account
                 <span className="absolute -left-1 top-0">
                   <AiFillProfile className="h-5 text-primary" />
                 </span>
-              </li>
+              </Link>
               <li className="relative cursor-pointer  px-6 text-sm hover:text-primary">
                 Profile information
               </li>
@@ -81,12 +84,15 @@ function Account() {
               </li>
             </ul>
             <ul className=" space-y-1 rounded bg-white py-2 text-gray-600">
-              <li className="relative cursor-pointer  px-6 text-sm hover:text-primary">
+              <Link
+                to="/account/wishlist"
+                className="relative cursor-pointer  px-6 text-sm hover:text-primary"
+              >
                 My Wishlist
                 <span className="absolute -left-1 top-0">
                   <AiOutlineHeart className="h-5 text-gray-600" />
                 </span>
-              </li>
+              </Link>
             </ul>
             <ul className="space-y-1 rounded bg-white py-2 text-gray-600">
               <li className="relative px-6  text-sm">
