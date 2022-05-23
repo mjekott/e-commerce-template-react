@@ -11,6 +11,7 @@ import ManageProfile from "./pages/ManageProfile.page";
 import ProfileInformation from "./pages/ProfileInformation.page";
 import ManageAddress from "./pages/ManageAddress.page";
 import ChangePassword from "./pages/ChangePassword.page";
+import WishList from "./pages/WishList.page";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
               path="/account/change-password"
               element={<ChangePassword />}
             />
+            <Route path="/account/wishlist" element={<WishList />} />
           </Route>
         </Route>
       </Routes>
